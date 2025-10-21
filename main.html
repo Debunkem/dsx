@@ -1,0 +1,550 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Diwali 2025 - Festival of Lights</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Georgia', serif;
+            background: linear-gradient(135deg, #1a0033 0%, #4a0e4e 50%, #ff6b35 100%);
+            color: #fff;
+            overflow-x: hidden;
+        }
+
+        /* Floating Diyas Animation */
+        .diya {
+            position: fixed;
+            width: 40px;
+            height: 40px;
+            animation: float 6s infinite ease-in-out;
+            z-index: 1;
+            opacity: 0.8;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0) rotate(0deg); }
+            50% { transform: translateY(-30px) rotate(10deg); }
+        }
+
+        /* Sparkle Animation */
+        .sparkle {
+            position: fixed;
+            width: 5px;
+            height: 5px;
+            background: radial-gradient(circle, #ffeb3b, transparent);
+            border-radius: 50%;
+            animation: sparkle 3s infinite;
+            z-index: 1;
+        }
+
+        @keyframes sparkle {
+            0%, 100% { opacity: 0; transform: scale(0); }
+            50% { opacity: 1; transform: scale(1); }
+        }
+
+        /* Header */
+        header {
+            text-align: center;
+            padding: 60px 20px;
+            background: linear-gradient(180deg, rgba(255,107,53,0.3) 0%, transparent 100%);
+            position: relative;
+            z-index: 2;
+        }
+
+        h1 {
+            font-size: 4em;
+            color: #ffd700;
+            text-shadow: 3px 3px 6px rgba(255,0,0,0.5), -3px -3px 6px rgba(255,165,0,0.5);
+            animation: glow 2s infinite alternate;
+            margin-bottom: 20px;
+        }
+
+        @keyframes glow {
+            from { text-shadow: 3px 3px 6px rgba(255,0,0,0.5), -3px -3px 6px rgba(255,165,0,0.5); }
+            to { text-shadow: 3px 3px 20px rgba(255,0,0,0.8), -3px -3px 20px rgba(255,165,0,0.8); }
+        }
+
+        .subtitle {
+            font-size: 1.5em;
+            color: #ffeb3b;
+            animation: fadeIn 2s;
+        }
+
+        /* Main Content */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 40px 20px;
+            position: relative;
+            z-index: 2;
+        }
+
+        .card {
+            background: linear-gradient(145deg, rgba(255,107,53,0.2), rgba(255,195,0,0.2));
+            border: 2px solid #ffd700;
+            border-radius: 20px;
+            padding: 40px;
+            margin: 30px 0;
+            box-shadow: 0 10px 40px rgba(255,107,53,0.4);
+            animation: slideIn 1s;
+            backdrop-filter: blur(10px);
+        }
+
+        @keyframes slideIn {
+            from { transform: translateY(50px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+
+        .card h2 {
+            color: #ffd700;
+            font-size: 2.5em;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .card p {
+            font-size: 1.2em;
+            line-height: 1.8;
+            color: #ffe4b5;
+            transition: all 0.3s ease;
+        }
+
+        .card p:hover {
+            color: #00d4ff;
+            text-shadow: 0 0 10px rgba(0, 212, 255, 0.8), 0 0 20px rgba(0, 212, 255, 0.6), 0 0 30px rgba(0, 150, 255, 0.4);
+            animation: blueGlow 2s infinite ease-in-out;
+        }
+
+        @keyframes blueGlow {
+            0%, 100% { text-shadow: 0 0 10px rgba(0, 212, 255, 0.8), 0 0 20px rgba(0, 212, 255, 0.6), 0 0 30px rgba(0, 150, 255, 0.4); }
+            50% { text-shadow: 0 0 15px rgba(0, 212, 255, 1), 0 0 30px rgba(0, 212, 255, 0.8), 0 0 45px rgba(0, 150, 255, 0.6); }
+        }
+
+        /* Rangoli Pattern */
+        .rangoli {
+            width: 200px;
+            height: 200px;
+            margin: 30px auto;
+            position: relative;
+            animation: rotate 20s infinite linear;
+        }
+
+        @keyframes rotate {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+
+        .rangoli-petal {
+            position: absolute;
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            top: 50%;
+            left: 50%;
+            transform-origin: center;
+        }
+
+        .rangoli-petal:nth-child(1) { background: #ff1744; transform: translate(-40px, -40px) rotate(0deg); }
+        .rangoli-petal:nth-child(2) { background: #ffeb3b; transform: translate(0, -60px) rotate(45deg); }
+        .rangoli-petal:nth-child(3) { background: #00e676; transform: translate(20px, -40px) rotate(90deg); }
+        .rangoli-petal:nth-child(4) { background: #2979ff; transform: translate(20px, 0) rotate(135deg); }
+        .rangoli-petal:nth-child(5) { background: #ff6b35; transform: translate(0, 20px) rotate(180deg); }
+        .rangoli-petal:nth-child(6) { background: #d500f9; transform: translate(-40px, 0) rotate(225deg); }
+
+        /* Lamp Animation */
+        .lamp-container {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            margin: 40px 0;
+            flex-wrap: wrap;
+        }
+
+        .lamp {
+            position: relative;
+            animation: bounce 2s infinite;
+        }
+
+        .lamp:nth-child(2) { animation-delay: 0.3s; }
+        .lamp:nth-child(3) { animation-delay: 0.6s; }
+
+        @keyframes bounce {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-20px); }
+        }
+
+        .flame {
+            width: 30px;
+            height: 50px;
+            background: linear-gradient(to top, #ff6b35, #ffd700, #ffeb3b);
+            border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%;
+            margin: 0 auto;
+            animation: flicker 1s infinite;
+        }
+
+        @keyframes flicker {
+            0%, 100% { opacity: 1; transform: scale(1); }
+            50% { opacity: 0.8; transform: scale(1.1); }
+        }
+
+        .lamp-base {
+            width: 60px;
+            height: 40px;
+            background: linear-gradient(145deg, #ff6b35, #d84315);
+            border-radius: 10px 10px 20px 20px;
+            margin: 0 auto;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 40px 20px;
+            background: linear-gradient(180deg, transparent 0%, rgba(255,107,53,0.3) 100%);
+            color: #ffd700;
+            font-size: 1.2em;
+            position: relative;
+            z-index: 2;
+        }
+
+        /* Firework Effect - Japanese Style */
+        .firework {
+            position: fixed;
+            width: 3px;
+            height: 3px;
+            border-radius: 50%;
+            z-index: 1;
+            opacity: 0;
+        }
+
+        .firework-particle {
+            position: absolute;
+            width: 2px;
+            height: 2px;
+            border-radius: 50%;
+            background: inherit;
+        }
+
+        @keyframes fireworkBurst {
+            0% {
+                opacity: 1;
+                transform: translate(0, 0) scale(1);
+            }
+            100% {
+                opacity: 0;
+                transform: translate(var(--x), var(--y)) scale(0.3);
+            }
+        }
+
+        @keyframes fireworkRise {
+            0% {
+                bottom: 0;
+                opacity: 1;
+            }
+            100% {
+                bottom: var(--peak);
+                opacity: 1;
+            }
+        }
+
+        /* Orange Light Fade Effect */
+        .orange-fade {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 0;
+            background: linear-gradient(to bottom, rgba(255, 107, 53, 0.15) 0%, rgba(255, 107, 53, 0.08) 30%, transparent 100%);
+            opacity: 0;
+            transition: opacity 0.3s ease-out;
+        }
+
+        .orange-fade.active {
+            opacity: 1;
+        }
+    </style>
+</head>
+<body>
+    <!-- Orange Light Fade Effect -->
+    <div class="orange-fade"></div>
+
+    <!-- Animated Diyas -->
+    <div class="diya" style="left: 10%; top: 20%;">🪔</div>
+    <div class="diya" style="left: 10%; top: 20%;">🪔</div>
+    <div class="diya" style="left: 85%; top: 30%; animation-delay: 1s;">🪔</div>
+    <div class="diya" style="left: 15%; top: 60%; animation-delay: 2s;">🪔</div>
+    <div class="diya" style="left: 90%; top: 70%; animation-delay: 1.5s;">🪔</div>
+
+    <!-- Header -->
+    <header id="top">
+        <h1>✨ Happy Diwali 2025 ✨</h1>
+        <p class="subtitle">🪔 Festival of Lights & Joy 🪔</p>
+    </header>
+
+    <!-- Main Content -->
+    <div class="container">
+        <!-- Welcome Card -->
+        <div class="card">
+            <h2>🎆 Welcome to the Festival of Lights 🎆</h2>
+            <p>
+                Diwali hits different when you're celebrating with your squad fr fr! 🔥 The most awaited festival of the year brings light, happiness, and prosperity into our lives. 
+                As we light diyas and burst crackers, let's celebrate the victory of light over darkness, good over evil, 
+                and knowledge over ignorance. This Diwali, let's not just light diyas, let's light up our dreams and our campus! 
+                Remember: First year might be scary, but you're not "mid" - you're ABSOLUTELY on fire! 💯 May this Diwali illuminate your college journey with endless joy and success!
+            </p>
+            <p style="margin-top: 15px; font-style: italic; color: #ffd700;">
+                "The only way to do great work is to love what you do." - Let this Diwali be your main character moment! ✨
+            </p>
+        </div>
+
+        <!-- Rangoli -->
+        <div class="rangoli">
+            <div class="rangoli-petal"></div>
+            <div class="rangoli-petal"></div>
+            <div class="rangoli-petal"></div>
+            <div class="rangoli-petal"></div>
+            <div class="rangoli-petal"></div>
+            <div class="rangoli-petal"></div>
+        </div>
+
+        <!-- Traditions Card -->
+        <div class="card">
+            <h2>🎊 Diwali Traditions 🎊</h2>
+            <p>
+                Diwali is celebrated over five days with various rituals and customs. From cleaning and decorating homes 
+                with rangolis to lighting oil lamps, performing Lakshmi puja, exchanging gifts, and enjoying delicious 
+                sweets with family and friends. Each tradition carries deep significance and brings families together 
+                in celebration of light, love, and prosperity.
+            </p>
+            <p style="margin-top: 15px; font-style: italic; color: #ffd700;">
+                "Don't watch the clock; do what it does. Keep going." - This Diwali, be unstoppable!
+            </p>
+            <p style="margin-top: 10px; color: #ffeb3b;">
+                Pro tip: Group photo with diyas = instant Instagram story gold. Your freshman year is already iconic!
+            </p>
+        </div>
+
+        <!-- Lamps -->
+        <div class="lamp-container">
+            <div class="lamp">
+                <div class="flame"></div>
+                <div class="lamp-base"></div>
+            </div>
+            <div class="lamp">
+                <div class="flame"></div>
+                <div class="lamp-base"></div>
+            </div>
+            <div class="lamp">
+                <div class="flame"></div>
+                <div class="lamp-base"></div>
+            </div>
+        </div>
+
+        <!-- Wishes Card -->
+        <div class="card">
+            <h2>💫 Diwali Wishes 💫</h2>
+            <p>
+                May the divine light of Diwali spread peace, prosperity, happiness, and good health in your life. 
+                May the beauty of this festival fill your hostel rooms and hearts with happiness, and may the coming year provide you 
+                with all that brings you joy - acing exams, making memories, and living your best college life! 
+                Wishing you and your college fam a very Happy Diwali! May your freshman year be as colorful, shimmering, 
+                and magical as the lights of Diwali!
+            </p>
+            <p style="margin-top: 15px; font-style: italic; color: #ffd700;">
+                "Believe you can and you're halfway there." - Your glow-up starts NOW! This is your era!
+            </p>
+
+        </div>
+
+        <!-- New Motivation Card -->
+        <div class="card">
+            <h2>🔥 First Year Diwali Motivation Station 🔥</h2>
+            <p>
+                This Diwali, remember: You're literally THAT freshman! Just like diyas light up the darkness, you've got the power to 
+                illuminate your path through college. No more doom scrolling about missing home - you're creating NEW traditions with 
+                your squad! It's giving new beginnings energy! 💪
+            </p>
+            <p style="margin-top: 15px; font-style: italic; color: #ffd700;">
+                "The future belongs to those who believe in the beauty of their dreams." - Eleanor Roosevelt
+            </p>
+            <p style="margin-top: 10px; color: #ffeb3b;">
+                Real talk: If you survived your first semester, freshers week, and that one presentation you forgot about - you can 
+                survive anything! College is your playground now! 😂 Chase your dreams like you chase the mess food on special occasions!
+            </p>
+            <p style="margin-top: 10px; font-style: italic; color: #ffd700;">
+                "Success is not final, failure is not fatal: it is the courage to continue that counts." - Keep slaying, Class of 2028! 🌟
+            </p>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>🎇 May This Diwali Bring You Endless Joy & Prosperity 🎇</p>
+        <p style="margin-top: 10px;">शुभ दीपावली | Happy Diwali 2025</p>
+        <p style="margin-top: 20px; font-size: 0.9em; color: #ffeb3b;">Created by Vedansh</p>
+        <button id="surpriseBtn" style="margin-top: 20px; padding: 15px 30px; font-size: 1.2em; background: linear-gradient(145deg, #ff6b35, #ffd700); border: none; border-radius: 15px; color: #1a0033; font-weight: bold; cursor: pointer; box-shadow: 0 5px 15px rgba(255,107,53,0.5); transition: transform 0.3s;">
+            🎁 Surprise Gift 🎁
+        </button>
+        <div id="videoContainer" style="display: none; margin-top: 30px; max-width: 500px; margin-left: auto; margin-right: auto; text-align: center;">
+            <p style="color: #ffd700; font-size: 1.3em; margin-bottom: 15px;">🎁 Here's your surprise gift! 🎁</p>
+            <p style="color: #ffeb3b; font-size: 0.95em; margin-bottom: 20px; font-style: italic;">
+                ⚠️ Warning: This link contains a classic internet tradition from 2007. If you're not familiar with internet culture, 
+                you're about to experience something... legendary. Proceed at your own risk! 😏
+            </p>
+            <button id="rickrollBtn" style="display: inline-block; padding: 20px 40px; background: linear-gradient(145deg, #ff1744, #d500f9); color: white; text-Decoration: none; border-radius: 15px; font-size: 1.2em; font-weight: bold; box-shadow: 0 10px 30px rgba(255,23,68,0.6); transition: transform 0.3s; border: none; cursor: pointer;">
+                🎵 Click Here to Open Your Gift! 🎵
+            </button>
+            <p style="margin-top: 15px; color: #ffeb3b; font-size: 0.9em;">😂 Trust us, it's worth it! 😂</p>
+        </div>
+    </footer>
+
+    <!-- Hidden Audio Player -->
+    <audio id="rickrollAudio" style="display: none;"></audio>
+
+    <script>
+        // Create sparkles
+        for (let i = 0; i < 30; i++) {
+            const sparkle = document.createElement('div');
+            sparkle.className = 'sparkle';
+            sparkle.style.left = Math.random() * 100 + '%';
+            sparkle.style.top = Math.random() * 100 + '%';
+            sparkle.style.animationDelay = Math.random() * 3 + 's';
+            document.body.appendChild(sparkle);
+        }
+
+        // Create fireworks - Japanese style
+        function createJapaneseFirework() {
+            const fireworkContainer = document.createElement('div');
+            fireworkContainer.style.position = 'fixed';
+            fireworkContainer.style.left = (20 + Math.random() * 60) + '%';
+            fireworkContainer.style.bottom = '0';
+            fireworkContainer.style.zIndex = '1';
+            
+            const colors = [
+                ['#ff1744', '#ff5252', '#ff8a80'],  // Red burst
+                ['#00e676', '#69f0ae', '#b9f6ca'],  // Green burst
+                ['#2979ff', '#448aff', '#82b1ff'],  // Blue burst
+                ['#ffd700', '#ffeb3b', '#fff59d'],  // Gold burst
+                ['#d500f9', '#e040fb', '#ea80fc'],  // Purple burst
+                ['#ff6b35', '#ff9e80', '#ffccbc']   // Orange burst
+            ];
+            
+            const colorSet = colors[Math.floor(Math.random() * colors.length)];
+            const peakHeight = (40 + Math.random() * 30) + '%';
+            
+            // Create trail
+            const trail = document.createElement('div');
+            trail.style.width = '2px';
+            trail.style.height = '0';
+            trail.style.background = `linear-gradient(to top, ${colorSet[0]}, transparent)`;
+            trail.style.position = 'absolute';
+            trail.style.bottom = '0';
+            trail.style.left = '50%';
+            trail.style.transform = 'translateX(-50%)';
+            fireworkContainer.appendChild(trail);
+            
+            document.body.appendChild(fireworkContainer);
+            
+            // Animate trail rising
+            setTimeout(() => {
+                trail.style.transition = 'height 1.5s ease-out';
+                trail.style.height = peakHeight;
+            }, 10);
+            
+            // Create burst at peak
+            setTimeout(() => {
+                const burstCount = 60 + Math.floor(Math.random() * 40);
+                for (let i = 0; i < burstCount; i++) {
+                    const particle = document.createElement('div');
+                    particle.className = 'firework-particle';
+                    
+                    const angle = (Math.PI * 2 * i) / burstCount;
+                    const velocity = 120 + Math.random() * 180;
+                    const x = Math.cos(angle) * velocity;
+                    const y = Math.sin(angle) * velocity;
+                    
+                    // Alternate colors within the burst
+                    particle.style.background = colorSet[i % colorSet.length];
+                    particle.style.boxShadow = `0 0 8px ${colorSet[i % colorSet.length]}, 0 0 16px ${colorSet[i % colorSet.length]}`;
+                    particle.style.setProperty('--x', x + 'px');
+                    particle.style.setProperty('--y', y + 'px');
+                    particle.style.animation = 'fireworkBurst 2s ease-out forwards';
+                    
+                    // Add trailing effect for some particles
+                    if (i % 3 === 0) {
+                        particle.style.width = '4px';
+                        particle.style.height = '10px';
+                        particle.style.borderRadius = '50%';
+                    }
+                    
+                    fireworkContainer.appendChild(particle);
+                }
+                
+                // Cleanup
+                setTimeout(() => {
+                    fireworkContainer.remove();
+                }, 2000);
+            }, 1500);
+        }
+        
+        // Launch fireworks more frequently (every 2-3 seconds)
+        function launchFireworks() {
+            createJapaneseFirework();
+            const nextDelay = 2000 + Math.random() * 1000;
+            setTimeout(launchFireworks, nextDelay);
+        }
+        
+        // Start fireworks after a short delay
+        setTimeout(launchFireworks, 2000);
+
+        // Surprise button functionality
+        const surpriseBtn = document.getElementById('surpriseBtn');
+        const videoContainer = document.getElementById('videoContainer');
+        const rickrollBtn = document.getElementById('rickrollBtn');
+        const audio = document.getElementById('rickrollAudio');
+
+        surpriseBtn.addEventListener('click', function() {
+            videoContainer.style.display = 'block';
+            surpriseBtn.style.display = 'none';
+        });
+
+        rickrollBtn.addEventListener('click', function() {
+            // Open rickroll video in new tab
+            window.open('https://www.youtube.com/watch?v=dQw4w9WgXcQ', '_blank');
+        });
+
+        // Hover effect for button
+        surpriseBtn.addEventListener('mouseenter', function() {
+            this.style.transform = 'scale(1.1)';
+        });
+
+        surpriseBtn.addEventListener('mouseleave', function() {
+            this.style.transform = 'scale(1)';
+        });
+
+        rickrollBtn.addEventListener('mouseenter', function() {
+            this.style.transform = 'scale(1.1)';
+        });
+
+        rickrollBtn.addEventListener('mouseleave', function() {
+            this.style.transform = 'scale(1)';
+        });
+
+        // Orange fade effect on scroll
+        const orangeFade = document.querySelector('.orange-fade');
+
+        window.addEventListener('scroll', function() {
+            orangeFade.classList.add('active');
+        });
+    </script>
+</body>
+</html>
